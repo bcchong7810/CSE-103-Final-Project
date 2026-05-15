@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\LoadNewYork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:LoadNewYork.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Location.cpp",
+              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\Location.cpp",
+              "RelativeDocumentMoniker": "Location.cpp",
+              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\Location.cpp",
+              "RelativeToolTip": "Location.cpp",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-14T22:43:04.225Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoadNewYork.cpp",
+              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\LoadNewYork.cpp",
+              "RelativeDocumentMoniker": "LoadNewYork.cpp",
+              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\LoadNewYork.cpp",
+              "RelativeToolTip": "LoadNewYork.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-14T23:21:04.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\CSE 103 Final Project\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-14T22:44:57.718Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
