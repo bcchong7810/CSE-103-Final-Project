@@ -10,7 +10,7 @@ MainCharacter::MainCharacter(string userName) {
         name = userName;
         currentLocation = nullptr;
         inventory;
-        wallet = 0;
+        wallet = 100;
         hitPoints = 100;
         armorClass = 0;
         weaponBonus = 0;
@@ -26,6 +26,6 @@ string MainCharacter::getLocation() {
     return "What?";
 }
 
-int MainCharacter::moneyInWallet() {
+double MainCharacter::moneyInWallet() {
     return wallet;
 }

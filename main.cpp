@@ -1,7 +1,8 @@
-#include "MainCharacter.h"
-#include "Location.h"
-#include "Item.h"
-#include "LoadNewYork.h"
+#include "MainCharacter.h" //probably only needed for the test
+#include "Location.h" //probably only needed for the test
+#include "Item.h"//probably only needed for the test
+#include "LoadNewYork.h" //Bring in load map
+#include "minigames.h" //probably only needed for the test
 
 #include <vector>
 #include <string>
@@ -9,38 +10,29 @@
 
 using namespace std;
 
-int main() {
-    vector<Location> newYork = LoadNewYork();
-    string userName;
-    cout << "What is your name young traveler? ";
-    cin >> userName;
-    MainCharacter MC = MainCharacter(userName);
-    
-    MC.currentLocation = &newYork.at(0); //START!
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
-    MC.currentLocation = MC.currentLocation->nextLocationOne;
-    cout << "You are currently in " << MC.currentLocation->name << endl;
-    MC.currentLocation->canTravel();
+int main() {   
+    //Testing for games
 
+    string mcName = "Barry";
+    MainCharacter bearie = MainCharacter(mcName);
+
+    double wallet = 400;
+    double bet;
+    int guess;
+
+    cout << endl << endl << endl << endl;
+    cout << "How much do you want to bet? ";
+    cin >> bet;
+    cout << "What is your guess? ";
+    cin >> guess;
+
+    Gambling(bearie.wallet, bet, guess);
+    
+    cout << bearie.wallet;
+
+
+
+    
 
     //add gameLogic function/LOOP???
 

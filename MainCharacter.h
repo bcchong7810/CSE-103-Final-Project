@@ -9,11 +9,11 @@ class MainCharacter {
 public:
     std::string getName();
     std::string getLocation();
-    int moneyInWallet();
+    double moneyInWallet();
     MainCharacter(std::string userName);
     Location* currentLocation;
     std::string name;
-    int wallet;
+    double wallet;
     std::vector<Item> inventory;
     int hitPoints;
     int armorClass;

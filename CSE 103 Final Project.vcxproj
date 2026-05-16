@@ -146,9 +146,11 @@
     <ClCompile Include="MainCharacter.cpp" />
     <ClCompile Include="FFOF.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="minigames.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FFOF.h" />
+    <ClInclude Include="minigames.h" />
     <ClInclude Include="LoadNewYork.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Item.h" />

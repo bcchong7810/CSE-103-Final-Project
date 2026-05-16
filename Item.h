@@ -9,7 +9,7 @@ public:
     std::string name;
     std::string description;
     Item(std::string itemName, std::string itemDescription);
-    int amount;
+    double amount;
     std::string getName();
     std::string getDescription();
 private:

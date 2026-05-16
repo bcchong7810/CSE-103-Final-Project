@@ -36,6 +36,9 @@
     <ClCompile Include="LoadNewYork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="minigames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LoadNewYork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minigames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
