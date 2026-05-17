@@ -26,6 +26,7 @@ public:
     int numVisits;
 
     void canTravel();
+
 };
 
 #endif

@@ -1,11 +1,12 @@
-#include "MainCharacter.h" //probably only needed for the test
+#include "MainCharacter.h" //Needed for character creation
 #include "Location.h" //probably only needed for the test
 #include "Item.h"//probably only needed for the test
 #include "LoadNewYork.h" //Bring in load map
 #include "minigames.h" //probably only needed for the test
-#include "Introduction.h"
+#include "Introduction.h" 
 #include "Response.h"
 #include "FFOF.h"
+#include "Art.h"
 #include <vector>
 #include <string>
 #include <iostream>

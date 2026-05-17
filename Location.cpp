@@ -35,3 +35,5 @@ void Location::canTravel() {
     
 }
 
+
+

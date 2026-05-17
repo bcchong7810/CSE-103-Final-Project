@@ -7,7 +7,6 @@
 
 class MainCharacter {
 public:
-    std::string getName();
     std::string getLocation();
     double moneyInWallet();
     MainCharacter(std::string userName);

@@ -5,7 +5,7 @@
 #include "MainCharacter.h"
 #include "Item.h"
 #include "FFOF.h"
-
+#include "Art.h"
 using namespace std;
 
 
@@ -22,9 +22,6 @@ MainCharacter::MainCharacter(string userName) {
         emptyString = " ";
 }
 
-string MainCharacter::getName() {
-    return name;
-}
 
 string MainCharacter::getLocation() {
     return currentLocation->name;
@@ -37,6 +34,20 @@ double MainCharacter::moneyInWallet() {
 void MainCharacter::arriveToLocation() {  
     cout << "You arrive at " << this->currentLocation->name << "." << endl;
     if (this->currentLocation->numVisits == 0) {
+        
+        if (this->currentLocation->name == "THE METROPOLITAN MUSEUM OF ART") {
+            ArtMuseum();
+        }
+        else if (this->currentLocation->name == "ANCIENT GREEK ART EXHIBIT") {
+            ArtOne();
+        }
+        else if (this->currentLocation->name == "MEDIEVAL ART EXHIBIT") {
+            ArtMedieval();
+        }
+        else if (this->currentLocation->name == "THE SUBWAY") {
+            ArtTitle();
+        }
+       
         cout << this->currentLocation->description << endl << endl;
     }
     this->currentLocation->numVisits = this->currentLocation->numVisits + 1;
@@ -64,6 +75,7 @@ void MainCharacter::traverseToLocation(string locationName) {
 
         if (notValidLocation) {
             cout << "Please enter a valid location.\n";
+            this->currentLocation->canTravel();
             Formatting(newInput);
         }
     }
