@@ -5,6 +5,6 @@
 #include <vector>
 #include <string>
 
-std::vector<Location> LoadNewYork();
+std::vector<Location*> LoadNewYork();
 
 #endif

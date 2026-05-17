@@ -5,22 +5,8 @@
 
 using namespace std;
 
-string InputSanitizer(string userInput){
-	string cleanUserString = "";
-	for (int i = 0; i < userInput.length(); i++) {
-		if (isalpha(userInput[i])) {
-			cleanUserString += tolower(userInput[i]);
-		}
-	}
-	return cleanUserString;
-}
-
-void InputDecisionMaker(string cleanUserInput) {
-	cout << "Placeholder";
-}
-
 void LineBreak() {
-	cout << "Placeholder";
+	cout << "\n\n\n";
 }
 
 void SpaceBreak() {

@@ -16,23 +16,22 @@ Location::Location(string locationName, string locationDescription, Location* pr
     this->nextLocationThree = nullptr;
     this->NPCone = nullptr;
     this->NPCtwo = nullptr;
+    vector<Location*> locations;
 
 }
 
 void Location::canTravel() {
-    vector<Location*> locationsDraft = {this->priorLocationOne, this->priorLocationTwo, this->nextLocationOne, this->nextLocationTwo, this->nextLocationThree};
-    vector<Location*> locations;
-
+    vector<Location*> locationsDraft = { this->priorLocationOne, this->priorLocationTwo, this->nextLocationOne, this->nextLocationTwo, this->nextLocationThree };
+    this->locations = {};
     for (int i = 0; i < locationsDraft.size(); i++) {
         if (locationsDraft.at(i) != nullptr) {
-            locations.push_back(locationsDraft.at(i));
+            this->locations.push_back(locationsDraft.at(i));
         }
     }
-
-    cout << "Where do you want to go?\n";
-
-    for (int i = 0; i < locations.size(); i++) { 
-        cout << locations.at(i)->name << endl;
-    } 
+    
+    for (int i = 0; i < this->locations.size(); i++) {
+        cout << i + 1 << ") " << this->locations.at(i)->name << endl;
+    }
+    
 }
 

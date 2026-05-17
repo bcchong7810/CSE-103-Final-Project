@@ -3,6 +3,9 @@
 #include "Item.h"//probably only needed for the test
 #include "LoadNewYork.h" //Bring in load map
 #include "minigames.h" //probably only needed for the test
+#include "GameLogic.h" //What do I do with you?
+#include "Introduction.h"
+#include "Response.h"
 
 #include <vector>
 #include <string>
@@ -10,32 +13,70 @@
 
 using namespace std;
 
-int main() {   
-    //Testing for games
-
-    string mcName = "Barry";
-    MainCharacter bearie = MainCharacter(mcName);
-
-    double wallet = 400;
-    double bet;
-    int guess;
-
-    cout << endl << endl << endl << endl;
-    cout << "How much do you want to bet? ";
-    cin >> bet;
-    cout << "What is your guess? ";
-    cin >> guess;
-
-    Gambling(bearie.wallet, bet, guess);
-    
-    cout << bearie.wallet;
-
-
-
+int main() {  
+    //Loading maps...
+    vector<Location*> NYC = LoadNewYork();
+    /*
+    //Character creation...
+    string userName;
+    userName = Introduction();
+    */
+    string userResponse;
+    string userInput; //not used
+    string userName;
     
 
-    //add gameLogic function/LOOP???
+    
+    userName = "Melinoe"; //Test input
+    MainCharacter mc = MainCharacter(userName);
+    
+    //Part of start game
+    mc.currentLocation = NYC.at(0);
+    mc.arriveToLocation();
+    
+    //Game loop
+    while (userResponse != "HOME") {
+        cout << "What would you like to do?\n";
+        getline(cin, userResponse);
+        //Take response
+        
+        bool responseLoop = true;
+        userResponse = Respond(userResponse);
+        if (userResponse == "go") {
+            cout << "Where would you like to go?\n";
+            mc.currentLocation->canTravel();
+            getline(cin, userResponse);
+            mc.traverseToLocation(userResponse);
+            mc.arriveToLocation();
+            responseLoop = false;
+        }
+        else if (userResponse == "examine") {
+            cout << mc.currentLocation->description << endl;
+            cout << "You see signs for: " << endl;
+            mc.currentLocation->canTravel();
+            responseLoop = false;
+        }
+        else if (userResponse == "talk") {
+            cout << "Gonna put some NPC stuff here";
+        }
+        else if (userResponse == "whereami") {
+            cout << "You are in " << mc.currentLocation->name << endl;
+        }
+    }
 
-    cout << "Program complete!";
+
+
+   
+    
+ 
+    
+    
+
+    
+    //while loop game logic here
+  
+
+
     system("pause > 0"); //TAKE OUT ONLY FOR TESTING AND CLEAN INPUT IN VS
 }
+

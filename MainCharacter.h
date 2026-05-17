@@ -20,7 +20,8 @@ public:
     int weaponBonus;
     int numberofDeaths;
     std::string emptyString;
-
+    void arriveToLocation();
+    void traverseToLocation(std::string locationName);
 
 };
 
