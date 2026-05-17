@@ -35,14 +35,12 @@ int main() {
     
     while (userResponse != "HOME") { //Change the end condition for game over
         cout << "What would you like to do?\n";
-        getline(cin, userResponse);
-        Formatting();
+        Formatting(userResponse);
         userResponse = Respond(userResponse);
         if (userResponse == "go") {
             cout << "Where would you like to go?\n";
             mc.currentLocation->canTravel();
-            getline(cin, userResponse);
-            Formatting();
+            Formatting(userResponse);
             mc.traverseToLocation(userResponse);
             mc.arriveToLocation();
         }
@@ -57,7 +55,7 @@ int main() {
         else if (userResponse == "whereami") {
             cout << "You are in " << mc.currentLocation->name << endl;
         }
-    } *
+    } 
 
 
 

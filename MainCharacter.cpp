@@ -65,7 +65,7 @@ void MainCharacter::traverseToLocation(string locationName) {
         if (notValidLocation) {
             cout << "Please enter a valid location.\n";
             getline(cin, newInput);
-            Formatting();
+            Formatting(newInput);
         }
     }
 }
