@@ -1,12 +1,14 @@
 #include <vector>
 #include <string>
 #include "Response.h"
-
-using namespace std;
-
 #include "Location.h"
 #include "MainCharacter.h"
 #include "Item.h"
+#include "FFOF.h"
+
+using namespace std;
+
+
 
 MainCharacter::MainCharacter(string userName) {
         name = userName;
@@ -44,7 +46,6 @@ void MainCharacter::arriveToLocation() {
 void MainCharacter::traverseToLocation(string locationName) {
     bool notValidLocation = true;
     string newInput = locationName;
-    cout << "New Input: " << newInput << endl;
     while (notValidLocation) {
         for (int i = 0; i < this->currentLocation->locations.size(); i++) {
             if (LocationNameSanitizer(newInput) == LocationNameSanitizer(this->currentLocation->locations.at(i)->name)) {
@@ -60,11 +61,11 @@ void MainCharacter::traverseToLocation(string locationName) {
             }
         }
 
-        cout << "Valid Location? " << notValidLocation << endl;
 
         if (notValidLocation) {
             cout << "Please enter a valid location.\n";
             getline(cin, newInput);
+            Formatting();
         }
     }
 }

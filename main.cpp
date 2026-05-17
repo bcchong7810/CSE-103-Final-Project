@@ -3,10 +3,9 @@
 #include "Item.h"//probably only needed for the test
 #include "LoadNewYork.h" //Bring in load map
 #include "minigames.h" //probably only needed for the test
-#include "GameLogic.h" //What do I do with you?
 #include "Introduction.h"
 #include "Response.h"
-
+#include "FFOF.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -22,7 +21,6 @@ int main() {
     userName = Introduction();
     */
     string userResponse;
-    string userInput; //not used
     string userName;
     
 
@@ -34,27 +32,24 @@ int main() {
     mc.currentLocation = NYC.at(0);
     mc.arriveToLocation();
     
-    //Game loop
-    while (userResponse != "HOME") {
+    
+    while (userResponse != "HOME") { //Change the end condition for game over
         cout << "What would you like to do?\n";
         getline(cin, userResponse);
-        //Take response
-        
-        bool responseLoop = true;
+        Formatting();
         userResponse = Respond(userResponse);
         if (userResponse == "go") {
             cout << "Where would you like to go?\n";
             mc.currentLocation->canTravel();
             getline(cin, userResponse);
+            Formatting();
             mc.traverseToLocation(userResponse);
             mc.arriveToLocation();
-            responseLoop = false;
         }
         else if (userResponse == "examine") {
             cout << mc.currentLocation->description << endl;
             cout << "You see signs for: " << endl;
             mc.currentLocation->canTravel();
-            responseLoop = false;
         }
         else if (userResponse == "talk") {
             cout << "Gonna put some NPC stuff here";
@@ -62,18 +57,10 @@ int main() {
         else if (userResponse == "whereami") {
             cout << "You are in " << mc.currentLocation->name << endl;
         }
-    }
+    } *
 
 
 
-   
-    
- 
-    
-    
-
-    
-    //while loop game logic here
   
 
 

@@ -1,4 +1,5 @@
 #include "Response.h"
+#include "FFOF.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -48,6 +49,7 @@ bool YesNoResponse(string sanitizedInput) {
 		
 		cout << "Please answer yes or no.\n";
 		getline(cin, newInput);
+		Formatting;
 		cleanInput = InputSanitizer(newInput);
 
 	}
@@ -71,6 +73,7 @@ string Respond(string lowerSanitizedInput) {
 		if (notValidWord) {
 			cout << "I don't understand. Please try again.\n";
 			getline(cin, testWord);
+			Formatting();
 		}
 	}
 

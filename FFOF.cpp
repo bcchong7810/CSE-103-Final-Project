@@ -5,12 +5,16 @@
 
 using namespace std;
 
+void Cursor() {
+	cout << ">> ";
+}
+
 void LineBreak() {
 	cout << "\n\n\n";
 }
 
 void SpaceBreak() {
-	cout << "Placeholder";
+	cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n";
 }
 
 void ArtOne() {
@@ -19,4 +23,11 @@ void ArtOne() {
 
 void ArtTwo() {
 	cout << "Placeholder";
+}
+
+void Formatting(string &userInput) {
+	Cursor();
+	getline(cin, userInput);
+	LineBreak();
+	SpaceBreak();
 }
