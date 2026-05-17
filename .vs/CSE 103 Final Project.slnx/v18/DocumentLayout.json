@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:Response.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:Response.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\MainCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:MainCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:Location.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:FFOF.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:FFOF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\NPC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{02F22DA6-30E6-409D-972E-0C77C4E2C717}|CSE 103 Final Project.vcxproj|solutionrelative:NPC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,95 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 268,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "NPC.h",
+              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\NPC.h",
+              "RelativeDocumentMoniker": "NPC.h",
+              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\NPC.h",
+              "RelativeToolTip": "NPC.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-17T19:56:22.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FFOF.cpp",
               "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.cpp",
               "RelativeDocumentMoniker": "FFOF.cpp",
               "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.cpp",
               "RelativeToolTip": "FFOF.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T17:38:19.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FFOF.h",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.h",
-              "RelativeDocumentMoniker": "FFOF.h",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\FFOF.h",
-              "RelativeToolTip": "FFOF.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-17T17:37:51.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T17:22:23.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Response.cpp",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.cpp",
-              "RelativeDocumentMoniker": "Response.cpp",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.cpp",
-              "RelativeToolTip": "Response.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAFQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T15:02:21.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Location.cpp",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Location.cpp",
-              "RelativeDocumentMoniker": "Location.cpp",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Location.cpp",
-              "RelativeToolTip": "Location.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T04:50:28.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Response.h",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.h",
-              "RelativeDocumentMoniker": "Response.h",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\Response.h",
-              "RelativeToolTip": "Response.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-17T04:40:49.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainCharacter.cpp",
-              "DocumentMoniker": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\MainCharacter.cpp",
-              "RelativeDocumentMoniker": "MainCharacter.cpp",
-              "ToolTip": "C:\\Users\\mechg\\OneDrive\\Desktop\\CSE 103 Final Project\\MainCharacter.cpp",
-              "RelativeToolTip": "MainCharacter.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-17T04:07:46.192Z",
+              "WhenOpened": "2026-05-17T19:51:49.581Z",
               "EditorCaption": ""
             }
           ]

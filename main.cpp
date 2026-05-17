@@ -15,13 +15,14 @@ using namespace std;
 int main() {  
     //Loading maps...
     vector<Location*> NYC = LoadNewYork();
+    
     /*
     //Character creation...
     string userName;
     userName = Introduction();
     */
     string userResponse;
-    string userName;
+    string userName; //DELETE for Final
     
 
     
@@ -54,6 +55,9 @@ int main() {
         }
         else if (userResponse == "whereami") {
             cout << "You are in " << mc.currentLocation->name << endl;
+        }
+        else if (userResponse == "name") {
+            cout << "Your name is " << mc.name << endl;
         }
     } 
 

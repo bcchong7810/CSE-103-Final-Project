@@ -149,9 +149,11 @@
     <ClCompile Include="minigames.cpp" />
     <ClCompile Include="Introduction.cpp" />
     <ClCompile Include="Response.cpp" />
+    <ClCompile Include="Art.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FFOF.h" />
+    <ClInclude Include="Art.h" />
     <ClInclude Include="Introduction.h" />
     <ClInclude Include="minigames.h" />
     <ClInclude Include="LoadNewYork.h" />

@@ -45,6 +45,9 @@
     <ClCompile Include="Response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Art.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Item.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Response.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Art.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

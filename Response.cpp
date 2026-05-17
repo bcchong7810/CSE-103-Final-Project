@@ -57,11 +57,12 @@ bool YesNoResponse(string sanitizedInput) {
 	
 }
 
-string Respond(string lowerSanitizedInput) {
-	vector<string> validWords = {"observe", "examine", "lookaround" "goto", "go", "talk", "talkto", "whereami"};
-	string testWord = lowerSanitizedInput;
+string Respond(string userInput) {
+	vector<string> validWords = {"observe", "examine", "lookaround", "goto", "go", "talk", "talkto", "whereami", "name", "whatsmyname", "whoami"};
+	string testWord = userInput;
 	bool notValidWord = true;
 	while (notValidWord) {
+		testWord = InputSanitizer(testWord);
 		for (int i = 0; i < validWords.size(); i++) {
 			if (InputSanitizer(testWord) == validWords.at(i)) {
 				notValidWord = false;
@@ -77,13 +78,19 @@ string Respond(string lowerSanitizedInput) {
 
 	if (testWord == "observe" || testWord == "examine" || testWord == "lookaround") {
 		return "examine";
-	} else if (testWord == "goto" || testWord == "go") {
-		return "go";
-	} else if (testWord == "talk" || testWord == "talkto") {
-		return "talk";
-	} else if (testWord == "whereami") {
-		return "whereami";
 	} 
+	else if (testWord == "goto" || testWord == "go") {
+		return "go";
+	} 
+	else if (testWord == "talk" || testWord == "talkto") {
+		return "talk";
+	} 
+	else if (testWord == "whereami") {
+		return "whereami";
+	}
+	else if (testWord == "name" || testWord == "whatsmyname" || testWord == "whoami") {
+		return "name";
+	}
 
 
 }
