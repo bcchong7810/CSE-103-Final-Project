@@ -33,7 +33,7 @@
     <ClCompile Include="NPC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LoadNewYork.cpp">
+    <ClCompile Include="LoadWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="minigames.cpp">
@@ -46,6 +46,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Art.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogueSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,7 +68,7 @@
     <ClInclude Include="NPC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LoadNewYork.h">
+    <ClInclude Include="LoadWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="minigames.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Art.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogueSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,8 +14,8 @@ Location::Location(string locationName, string locationDescription, Location* pr
     this->nextLocationOne = nullptr;
     this->nextLocationTwo = nullptr;
     this->nextLocationThree = nullptr;
-    this->NPCone = nullptr;
-    this->NPCtwo = nullptr;
+    NPCone = nullptr;
+    NPCtwo = nullptr;
     vector<Location*> locations;
 
 }

@@ -9,3 +9,4 @@ NPC::NPC(string nameNPC, string descriptionNPC, string dialogueNPC) {
 	dialogue = dialogueNPC;	
 	money = 0;
 }
+

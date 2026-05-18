@@ -23,3 +23,8 @@ void Formatting(string &userInput) {
 	LineBreak();
 	SpaceBreak();
 }
+
+void smallFormatting() {
+	LineBreak();
+	SpaceBreak();
+}

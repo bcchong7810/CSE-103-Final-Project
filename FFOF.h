@@ -6,6 +6,7 @@ void Cursor();
 void LineBreak();
 void SpaceBreak();
 void Formatting(std::string &userInput);
+void smallFormatting();
 
 
 #endif

@@ -58,7 +58,7 @@ bool YesNoResponse(string sanitizedInput) {
 }
 
 string Respond(string userInput) {
-	vector<string> validWords = {"observe", "examine", "lookaround", "goto", "go", "talk", "talkto", "whereami", "name", "whatsmyname", "whoami"};
+	vector<string> validWords = {"observe", "examine", "lookaround", "goto", "go", "talk", "talkto", "whereami", "name", "whatsmyname", "whoami", "home"}; //REMOVE home
 	string testWord = userInput;
 	bool notValidWord = true;
 	while (notValidWord) {
@@ -90,6 +90,9 @@ string Respond(string userInput) {
 	}
 	else if (testWord == "name" || testWord == "whatsmyname" || testWord == "whoami") {
 		return "name";
+	}
+	else { //REMOVE CONNECTS TO HOME
+		return "HOME";
 	}
 
 

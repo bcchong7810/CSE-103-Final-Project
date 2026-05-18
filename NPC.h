@@ -9,7 +9,7 @@ class NPC {
 		std::string name;
 		std::string description;
 		std::string dialogue; //Do I want this to be an object?
-		NPC(std::string name, std::string description, std::string dialogue);
+		NPC(std::string name, std::string description, std::string dialogue = "");
 	private:
 		int money;
 		
