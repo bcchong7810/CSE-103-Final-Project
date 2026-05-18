@@ -27,6 +27,7 @@ class Location {
 
         void canTravel();
         void listofNPCS();
+        bool areThereNPCS();
 
 };
 

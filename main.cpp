@@ -18,16 +18,18 @@ int main() {
     //Loading maps...
     vector<Location*> world = LoadWorld();
     
+    /*
     //Character creation...
     string userName;
     userName = Introduction();
+    */
 
     string userResponse;
-    //string userName; //DELETE for Final
+    string userName; //DELETE for Final
     
 
     
-    //userName = "Melinoe";
+    userName = "Melinoe";
     MainCharacter mc = MainCharacter(userName);
     
     //Part of start game DELETE FOR FINAL
@@ -49,29 +51,36 @@ int main() {
             cout << mc.currentLocation->description << endl;
             cout << "You see signs for: " << endl;
             mc.currentLocation->canTravel();
+            cout << "You notice: \n";
             mc.currentLocation->listofNPCS();
         }
         else if (userResponse == "talk") {
-            cout << "Who or what do you want to talk to?\n";
-            Formatting(userResponse);
-            while (LocationNameSanitizer(userResponse) != mc.currentLocation->NPCone->name && LocationNameSanitizer(userResponse) != mc.currentLocation->NPCtwo->name && LocationNameSanitizer(userResponse) != "STOP") {
-                    cout << "I don't recognize who or what that is. Try again or STOP.\n";
+            if (mc.currentLocation->areThereNPCS()){
+                cout << "Who or what do you want to talk to?\n";
+                mc.currentLocation->listofNPCS();
+                Formatting(userResponse);
+                while (LocationNameSanitizer(userResponse) != mc.currentLocation->NPCone->name && LocationNameSanitizer(userResponse) != mc.currentLocation->NPCtwo->name && LocationNameSanitizer(userResponse) != "STOP") {
+                cout << "I don't recognize who or what that is. Try again or STOP.\n";
                     Formatting(userResponse);
+                }
+                if (LocationNameSanitizer(userResponse) == mc.currentLocation->NPCone->name) {
+                    DialogueSystem(mc.currentLocation->NPCone);
+                    if (mc.currentLocation->NPCone->name == "SPHINX") {
+                        mc.currentLocation = world.at(6);
+                        cout << "There's no going back, now...\n"
+                            "You feel yourself falling forwards and backwards at the same time.\n"
+                            "You land in a pile of hot sand. The sun is blazing above you.\n"
+                            "The heat is oppressive, you run forward to hide in a shadow\n"
+                            "You look up and see the Great Sphinx of Giza before you.\n";
+                    }
+                }
+                else if (LocationNameSanitizer(userResponse) == mc.currentLocation->NPCtwo->name) {
+                    DialogueSystem(mc.currentLocation->NPCtwo);
+                }
             }
-            if (LocationNameSanitizer(userResponse) == mc.currentLocation->NPCone->name) {
-                DialogueSystem(mc.currentLocation->NPCone);
-                if (mc.currentLocation->NPCone->name == "SPHINX") {
-                    mc.currentLocation = world.at(6);
-                    cout << "There's no going back, now...\n"
-                        "You feel yourself falling forwards and backwards at the same time.\n"
-                        "You land in a pile of hot sand. The sun is blazing above you.\n"
-                        "The heat is oppressive, you run forward to hide in a shadow\n"
-                        "You look up and see the Great Sphinx of Giza before you.\n";
-                } 
+            else {
+                cout << "There is no one to talk to.";
             }
-            else if (LocationNameSanitizer(userResponse) == mc.currentLocation->NPCtwo->name) {
-                DialogueSystem(mc.currentLocation->NPCtwo);
-            } 
                 LineBreak();
                 SpaceBreak();
         }

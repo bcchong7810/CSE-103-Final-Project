@@ -43,10 +43,19 @@ void Location::listofNPCS() {
         cout << "\n\nA few things catch your eyes in this room:\n";
         for (int i = 0; i < npcs.size(); i++) {
             if (npcs.at(i) != nullptr) {
-                cout << LocationNameSanitizer(npcs.at(i)->name) << endl;
+                cout << "-" << LocationNameSanitizer(npcs.at(i)->name) << endl;
                 LineBreak();
             }
         }
+    }
+}
+
+bool Location::areThereNPCS() {
+    if (this->NPCone == nullptr && this->NPCtwo == nullptr) {
+        return false;
+    }
+    else {
+        return true;
     }
 }
 
