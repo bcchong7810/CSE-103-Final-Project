@@ -13,7 +13,7 @@ using namespace std;
 MainCharacter::MainCharacter(string userName) {
         name = userName;
         currentLocation = nullptr;
-        inventory;
+        inventory = {};
         wallet = 100;
         hitPoints = 100;
         armorClass = 0;
@@ -23,11 +23,11 @@ MainCharacter::MainCharacter(string userName) {
 }
 
 
-string MainCharacter::getLocation() {
+string MainCharacter::getLocation() { //delete?
     return currentLocation->name;
 }
 
-double MainCharacter::moneyInWallet() {
+double MainCharacter::moneyInWallet() { //delete?
     return wallet;
 }
 
@@ -48,7 +48,8 @@ void MainCharacter::arriveToLocation() {
             ArtTitle();
         }
        
-        cout << this->currentLocation->description << endl << endl;
+        cout << this->currentLocation->description << endl;
+
     }
     this->currentLocation->numVisits = this->currentLocation->numVisits + 1;
     cout << "\n";

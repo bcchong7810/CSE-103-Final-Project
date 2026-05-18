@@ -52,7 +52,8 @@ vector<Location*> LoadWorld() {
 
 	//ancientEgyptExhibit
 	ancientEgyptExhibit->nextLocationOne = medievalArt;
-	ancientEgyptExhibit->NPCone = new NPC("Sphinx", "Test Description");
+	ancientEgyptExhibit->NPCone = new NPC("SPHINX", "Speak the words of power. Please use your INVOCATION voice.\n"); //INVOCATION INSTRUCTIONS);
+	
 
 
 	//sphinx
@@ -84,6 +85,8 @@ vector<Location*> LoadWorld() {
 	
 	//athens
 	athens->nextLocationOne = olympus;
+	athens->NPCone = new NPC("ATHENA", "What brings you to this part of Hellas? If you are going to be wandering around, you should be well prepared\n");
+
 	
 	//olympus no next location, dead end... keep for NPC creation
 	

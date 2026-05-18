@@ -1,4 +1,6 @@
 #include "Location.h"
+#include "Response.h"
+#include "FFOF.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -33,6 +35,19 @@ void Location::canTravel() {
         cout << i + 1 << ") " << this->locations.at(i)->name << endl;
     }
     
+}
+
+void Location::listofNPCS() {
+    vector<NPC*> npcs = { NPCone, NPCtwo };
+    if (NPCone != nullptr || NPCtwo != nullptr) {
+        cout << "\n\nA few things catch your eyes in this room:\n";
+        for (int i = 0; i < npcs.size(); i++) {
+            if (npcs.at(i) != nullptr) {
+                cout << LocationNameSanitizer(npcs.at(i)->name) << endl;
+                LineBreak();
+            }
+        }
+    }
 }
 
 

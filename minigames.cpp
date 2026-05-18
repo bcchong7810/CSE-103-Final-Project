@@ -21,7 +21,7 @@ void RPSGame(int input) {
     }
 }
 
-void RPSRules() {
+void RPSRules() { 
         cout << "Rules for Rock-Paper-Scissors-Spock-Lizard\n" << endl;
         cout << "Rock: Loses Against: Paper and Spock & Wins Against: Scissors and Lizard\n";
         cout << "Paper: Loses Against: Scissors and Lizard & Wins Against: Spock and Rock\n";
@@ -42,8 +42,8 @@ int Gambling(double &amount, double betting, int guess) { //Pass in variable not
     }
 
     double won = 0;
-    int die1 = (rand() % 6) + 1;
-    int die2 = (rand() % 6) + 1;
+    int die1 = DieRoll();
+    int die2 = DieRoll();
     int rng = die1 + die2;
 
     if (guess != rng) {
@@ -97,12 +97,12 @@ int DieRoll() {
     return rng;
 }
 
-int DiceGame() {
+int DiceGame() { //WIN 50 LOSE 50 cannot play if <50
     int game = -1;
 
     while (game < 0) {
-        int userDie = (rand() % 6) + 1;
-        int enemyDie = (rand() % 6) + 1;
+        int userDie = DieRoll();
+        int enemyDie = DieRoll();
 
         cout << "You Rolled: " << userDie << endl;
         cout << "Enemy Rolled: " << enemyDie << endl << endl;

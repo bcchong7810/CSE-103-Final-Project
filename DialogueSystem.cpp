@@ -9,8 +9,7 @@ using namespace std;
 void DialogueSystem(NPC* npc) {
 	string userInput;
 	cout << npc->name << ": " << npc->dialogue;
-	if (npc->name == "Sphinx") {
-		cout << "Speak the words of power. Please use your INVOCATION voice.\n"; //INVOCATION INSTRUCTIONS
+	if (npc->name == "SPHINX") {
 		Formatting(userInput);
 		while (userInput != "SPHINX OF BLACK QUARTZ JUDGE MY VOW") {
 			cout << "Those are not the words of power!\nDo you still want to speak them yourself?\n";
@@ -27,5 +26,5 @@ void DialogueSystem(NPC* npc) {
 		}
 		
 	}
-	//add to main please
+	
 }

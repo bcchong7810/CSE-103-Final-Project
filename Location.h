@@ -5,27 +5,28 @@
 #include "NPC.h"
 
 class Location {
-public:
-    std::string name;
-    std::string description;
+    public:
+        std::string name;
+        std::string description;
     
-    Location* nextLocationOne;
-    Location* nextLocationTwo;
-    Location* nextLocationThree;
-    Location* priorLocationOne;
-    Location* priorLocationTwo;
+        Location* nextLocationOne;
+        Location* nextLocationTwo;
+        Location* nextLocationThree;
+        Location* priorLocationOne;
+        Location* priorLocationTwo;
 
-    std::vector<Location*> locationsDraft;
-    std::vector<Location*> locations;
+        std::vector<Location*> locationsDraft;
+        std::vector<Location*> locations;
     
-    NPC* NPCone;
-    NPC* NPCtwo;
+        NPC* NPCone;
+        NPC* NPCtwo;
 
-    Location(std::string locationName, std::string locationDescription, Location* priorLocationOne = nullptr, Location* priorLocationTwo = nullptr);
+        Location(std::string locationName, std::string locationDescription, Location* priorLocationOne = nullptr, Location* priorLocationTwo = nullptr);
 
-    int numVisits;
+        int numVisits;
 
-    void canTravel();
+        void canTravel();
+        void listofNPCS();
 
 };
 

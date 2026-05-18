@@ -3,10 +3,8 @@
 
 using namespace std;
 
-NPC::NPC(string nameNPC, string descriptionNPC, string dialogueNPC) {
+NPC::NPC(string nameNPC, string dialogueNPC) {
 	name = nameNPC;
-	description = descriptionNPC;
 	dialogue = dialogueNPC;	
-	money = 0;
 }
 
