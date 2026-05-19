@@ -9,7 +9,7 @@
 using namespace std;
 
 
-
+//MC creator
 MainCharacter::MainCharacter(string userName) {
     name = userName;
     currentLocation = nullptr;
@@ -23,15 +23,8 @@ MainCharacter::MainCharacter(string userName) {
 }
 
 
-string MainCharacter::getLocation() { //delete?
-    return currentLocation->name;
-}
 
-double MainCharacter::moneyInWallet() { //delete?
-    return wallet;
-}
-
-void MainCharacter::arriveToLocation() {
+void MainCharacter::arriveToLocation() { //Prompts arrival so player is not confused
     cout << "You arrive at " << this->currentLocation->name << "." << endl;
     if (this->currentLocation->numVisits == 0) {
 
@@ -55,7 +48,7 @@ void MainCharacter::arriveToLocation() {
     cout << "\n";
 }
 
-void MainCharacter::traverseToLocation(string locationName) { // Changed: Just made it easier to read the code
+void MainCharacter::traverseToLocation(string locationName) { //Travelling through map
     string newInput = locationName;
     while (true) {
         Location* destination = nullptr;
@@ -92,3 +85,8 @@ void MainCharacter::AddMoney(double money) {
 void MainCharacter::SubtractMoney(double money) {
     wallet -= money;
 }
+
+double MainCharacter::moneyInWallet() {
+    return wallet;
+}
+

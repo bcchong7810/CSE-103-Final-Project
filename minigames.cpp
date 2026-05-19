@@ -98,7 +98,7 @@ void GamblingRules() { // Rules for Gambling
     cout << "REMINDER: THE HOUSE ALWAYS WIN\n";
 }
 
-int DiceGame(MainCharacter& totalMoney) { //WIN 50 LOSE 50 cannot play if <50
+int DiceGame(MainCharacter &totalMoney) { //WIN 50 LOSE 50 cannot play if <50
     int game = -1;
 
     while (game < 0) { // Game continues until a WINNER

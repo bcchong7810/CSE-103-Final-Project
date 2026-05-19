@@ -1,15 +1,32 @@
+/*CITATIONS
+* Locations inspired by the game Hades II
+* https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art
+* https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza
+* https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+* https://en.wikipedia.org/wiki/Kalamata
+* https://en.wikipedia.org/wiki/Sparta
+* https://en.wikipedia.org/wiki/Ancient_Corinth (for ephyra)
+* https://en.wikipedia.org/wiki/Santorini
+* https://en.wikipedia.org/wiki/Library_of_Alexandria
+* https://en.wikipedia.org/wiki/Athens
+* https://en.wikipedia.org/wiki/Tartarus
+* https://en.wikipedia.org/wiki/Fields_of_sorrow (mourning fields)
+* https://en.wikipedia.org/wiki/Asphodel_Meadows
+* 
+*/
+
 #include "LoadWorld.h"
 #include "Location.h"
 #include "NPC.h"
 #include <vector>
 #include <string>
 #include <iostream>
-#include "Art.h"//test
+#include "Art.h"
 
 using namespace std;
 
 vector<Location*> LoadWorld() {
-	//Start in Subway after intro
+	//Start in Subway after intro, loads map
 	Location* subway = new Location("THE SUBWAY", "There is a faint stench of urine, fresh and stagnant. The dark blue columns are slightly damn with a thin veneer of grime. Out of the corner of your eye you see something small scurrying back and forth.");
 	Location* met = new Location("THE OUTSIDE OF THE METROPOLITAN MUSEUM OF ART", "There is a large staircase tapering into a large doorway flanked by light gray limestone Corinthian columns.", subway);
 	Location* greatHall = new Location("GREAT HALL", "", met);
@@ -18,20 +35,22 @@ vector<Location*> LoadWorld() {
 	Location* medievalArt = new Location("MEDIEVAL ART EXHIBIT", "", greatHall);
 	Location* sphinx = new Location("THE GREAT SPHINX OF GIZA", "");
 	Location* cairo = new Location("MAIN CITY OF CAIRO", "", sphinx);
-	Location* pyramids = new Location("THE GREAT PYRAMID OF GIZA", "Test Description", cairo, sphinx);
-	Location* kalamata = new Location("KALAMATA", "Test Description", cairo);
-	Location* sparta = new Location("SPARTA", "Test Description", kalamata);
-	Location* ephyra = new Location("EPHYRA", "Test Description", sparta);
-	Location* alexandria = new Location("AlEXANDRIA", "Test Description", cairo, kalamata);
-	Location* santorini = new Location("SANTORINI", "Test Description", alexandria);
-	Location* athens = new Location("ATHENS", "Test Description", ephyra, santorini);
-	Location* elysium = new Location("ELYSIUM", "Test Description", ephyra);
-	Location* olympus = new Location("BASE OF MOUNT OLYMPUS", "Test Description", athens);
-	Location* asphodel = new Location("ASPHODEL MEADOWS", "Test Description", ephyra);
-	Location* mourning = new Location("MOURNING FIELDS", "Test Description", asphodel);
-	Location* tartarus = new Location("TARTARUS", "Test Description", mourning, asphodel);
+	Location* pyramids = new Location("THE GREAT PYRAMID OF GIZA", "", cairo, sphinx);
+	Location* kalamata = new Location("KALAMATA", "", cairo);
+	Location* sparta = new Location("SPARTA", "", kalamata);
+	Location* ephyra = new Location("EPHYRA", "", sparta);
+	Location* alexandria = new Location("AlEXANDRIA", "", cairo, kalamata);
+	Location* santorini = new Location("SANTORINI", "", alexandria);
+	Location* athens = new Location("ATHENS", "", ephyra, santorini);
+	Location* elysium = new Location("ELYSIUM", "", ephyra);
+	Location* olympus = new Location("BASE OF MOUNT OLYMPUS", "", athens);
+	Location* asphodel = new Location("ASPHODEL MEADOWS", "", ephyra);
+	Location* mourning = new Location("MOURNING FIELDS", "", asphodel);
+	Location* tartarus = new Location("TARTARUS", "", mourning, asphodel);
 	
 
+	//Following is connecting the locations to form the map, also NPC creation and description loading
+	
 	//subway
 	subway->nextLocationOne = met;
 	
@@ -96,10 +115,15 @@ vector<Location*> LoadWorld() {
 
 	//sparta
 	sparta->nextLocationOne = ephyra;
+	sparta->description = "You see army formations, and drills.\n"
+						  "Miles of soldiers with shields, spears and armor\n"
+						  "You get an uncomfortable feeling and don't linger too long\n";
 	
 	//ephyra
 	ephyra->nextLocationOne = athens;
 	ephyra->nextLocationTwo = elysium;
+	ephyra->description = "Sisyphus was once the king here. Some say that this city is the entrance to Hades, the underworld.\n"
+						  "They would be correct.\n";
 
 	//alexandria
 	alexandria->nextLocationOne = santorini;
@@ -122,11 +146,14 @@ vector<Location*> LoadWorld() {
 
 	
 	//olympus no next location, dead end... keep for NPC creation
-	olympus->NPCone = new NPC("ELDERLY BEGGAR", "");
+	olympus->NPCone = new NPC("ELDERLY BEGGAR", "You have come far to visit me here, but not for nothing.\n");
 	
 
 	//elysium
 	elysium->nextLocationOne = asphodel;
+	elysium->description = "This is where heroes go when they die. You see a large golden haired man imposing and towering.\n"
+						   "He does not notice you though and passes by you multiple times.\n"
+						   "Was that Achilles?";
 
 	//asphodel meadows
 	asphodel->nextLocationOne = mourning;
@@ -134,13 +161,22 @@ vector<Location*> LoadWorld() {
 
 	//mourning fields
 	mourning->nextLocationOne = tartarus;
+	mourning->description = "You immediately feel a heaviness all over your body, but mostly concentrated in your chest.\n"
+		"You look around and see the path dotted with white myrtles.\n"
+		"You hear shades cry about unrequited loves, and separated lovers.\n"
+		"You hear lovers scorned sobbing softly about betrayals.\n"
+		"The sounds of those separated from their beloved pets are the loudest of all.\n"
+		"You begin to realize this heavy feeling is grief.You try to leave, but to no avail.\n"
+		"You sit down and meditate trying to process this grief.\n"
+		"You finally accept what has been bothering you and you let it go.It is unclear how much time has passed.\n";
 
-	//tartarus home??
+	//tartarus
 	tartarus->description = "The deepest layer of Hades and some say even the Universe. Here you see the mortal who committed transgressions, that is unforgivable sins.\n"
 							"You see Sisyphus pushing his boulder up a steep slope for it to come crashing down from the top. At the bottom of that slope you see Tantalus bound to a tree.\n"
 							"You watch as he reaches up to grab a plump pomegranate for it to pull away at the last moment.\n"
 							"You see him kneel down to try to drink some water, but the water seems to recede into the ground under his feet when he comes near.\n";
 
+	//Returns a vector of location pointers; since the world is connected, it really just needs subway and cairo BUT the idea was to implement a fast travel system that didn't get added. Just thinking ahead...
 	vector<Location*> world = { subway, met, greatHall, ancientGreeceExhibit, ancientEgyptExhibit, medievalArt, sphinx, cairo, pyramids, kalamata, sparta, ephyra, alexandria, santorini, athens, olympus, elysium, asphodel, mourning, tartarus};
 
 	return world;

@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+//Creates upper case, originally made for LOCATIONS
 string LocationNameSanitizer(string locationName) {
 	string sanitizedLocationString = "";
 	for (int i = 0; i < locationName.length(); i++) {
@@ -18,6 +20,7 @@ string LocationNameSanitizer(string locationName) {
 
 }
 
+//lower case and removes spaces for cleaner input
 string InputSanitizer(string userInput) {
 	string sanitizedUserInput = "";
 	for (int i = 0; i < userInput.length(); i++) {
@@ -28,6 +31,7 @@ string InputSanitizer(string userInput) {
 	return sanitizedUserInput;
 }
 
+//streamlines yes/no answers
 bool YesNoResponse(string sanitizedInput) {
 	vector<string> yesResponse = {"yes", "y", "sure"};
 	vector<string> noResponse = {"no", "n", "nope"};
@@ -57,8 +61,9 @@ bool YesNoResponse(string sanitizedInput) {
 	
 }
 
+//narrows down game logic
 string Respond(string userInput) {
-	vector<string> validWords = { "observe", "examine", "lookaround", "goto", "go", "talk", "talkto", "whereami", "name", "whatsmyname", "whoami", "gamble", "gambling", "home"}; //REMOVE home
+	vector<string> validWords = { "observe", "examine", "lookaround", "goto", "go", "talk", "talkto", "whereami", "name", "whatsmyname", "whoami", "gamble", "gambling", "home"};
 	string testWord = userInput;
 	bool notValidWord = true;
 	while (notValidWord) {

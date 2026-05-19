@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Functions to clean up UI
+
 void Cursor() {
 	cout << ">> ";
 }

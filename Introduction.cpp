@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//Intro and name getting
 string Introduction() {
 	string userNameInput;
 	string userInput;

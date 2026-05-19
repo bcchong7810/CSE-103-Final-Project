@@ -8,7 +8,6 @@
 class MainCharacter {
 public:
     std::string getLocation();
-    double moneyInWallet();
     MainCharacter(std::string userName);
     Location* currentLocation;
     std::string name;
@@ -23,6 +22,7 @@ public:
     void traverseToLocation(std::string locationName);
     void AddMoney(double money);
     void SubtractMoney(double money);
+    double moneyInWallet();
 
 };
 
