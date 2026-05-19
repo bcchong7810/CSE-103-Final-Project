@@ -28,3 +28,19 @@ void smallFormatting() {
 	LineBreak();
 	SpaceBreak();
 }
+
+void intFormatting(int &num) {
+	Cursor();
+	cin >> num;
+	cin.clear(); //Used to clear possible extra \n
+	LineBreak();
+	SpaceBreak();
+}
+
+void doubleFormatting(double &num) {
+	Cursor();
+	cin >> num;
+	cin.clear();
+	LineBreak();
+	SpaceBreak();
+}
