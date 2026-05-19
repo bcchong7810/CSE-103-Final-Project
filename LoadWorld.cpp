@@ -10,11 +10,11 @@ using namespace std;
 
 vector<Location*> LoadWorld() {
 	//Start in Subway after intro
-	Location* subway = new Location("THE SUBWAY", "There is a faint stench of urine, fresh and stagnant. The dark blue columns are slightly damn with a thin veneer of grime. Out of the corner of your eye you see something small scurrying back and forth");
-	Location* met = new Location("THE METROPOLITAN MUSEUM OF ART", "There is a large staircase tapering into a large doorway flanked by light gray limestone Corinthian columns", subway);
-	Location* greatHall = new Location("GREAT HALL", "Test Description", met);
-	Location* ancientGreeceExhibit = new Location("ANCIENT GREEK ART EXHIBIT", "Test Description", greatHall);
-	Location* ancientEgyptExhibit = new Location("ANCIENT EGYPT ART EXHIBIT", "Test Description", greatHall);
+	Location* subway = new Location("THE SUBWAY", "There is a faint stench of urine, fresh and stagnant. The dark blue columns are slightly damn with a thin veneer of grime. Out of the corner of your eye you see something small scurrying back and forth.");
+	Location* met = new Location("THE OUTSIDE OF THE METROPOLITAN MUSEUM OF ART", "There is a large staircase tapering into a large doorway flanked by light gray limestone Corinthian columns.", subway);
+	Location* greatHall = new Location("GREAT HALL", "", met);
+	Location* ancientGreeceExhibit = new Location("ANCIENT GREEK ART EXHIBIT", "", greatHall);
+	Location* ancientEgyptExhibit = new Location("ANCIENT EGYPT ART EXHIBIT", "", greatHall);
 	Location* medievalArt = new Location("MEDIEVAL ART EXHIBIT", "Test Description", greatHall);
 	Location* sphinx = new Location("THE GREAT SPHINX OF GIZA", "Test Description");
 	Location* cairo = new Location("MAIN CITY OF CAIRO", "Test Description", sphinx);
@@ -45,10 +45,17 @@ vector<Location*> LoadWorld() {
 	
 	//ancientGreeceExhibit
 	ancientGreeceExhibit->nextLocationOne = medievalArt;
+	ancientGreeceExhibit->description = "White marble statues dot the exhibit displaying the Greco - Roman ideals of beauty.\n"
+										"For gods, goddesses, and mortals.Antiques from the Bronze Age now rusted green with only hints of the once metallic brown.\n"
+										"And of course, Greek and Roman white marble and limestone columns can be found throughout the exhibit./n";
 
 	//medievalArt
 	medievalArt->nextLocationOne = ancientEgyptExhibit;
 	medievalArt->nextLocationTwo = ancientGreeceExhibit;
+	medievalArt->description = "You enter a room surrounded by tapestries with fantastical animals oddly mixed with humans killing one another.\n"
+							   "Most of the tapestries and paintings seem to have an odd flat perspective.\n"
+							   "Another room is full of armor once worn by warriors of a different era.\n"
+							   "A gigantic zweihänder catches your eye and you are tempted to take it home, but that would be in poor form.\n";
 
 	//ancientEgyptExhibit
 	ancientEgyptExhibit->nextLocationOne = medievalArt;

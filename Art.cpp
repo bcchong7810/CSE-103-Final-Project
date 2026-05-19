@@ -79,16 +79,18 @@ void ArtMuseum() {
     SpaceBreak();
 }
 
-void ArtDice() {
-    cout << "       _______         _______\n"
-        << "      /       \\       /       \\\n"
-        << "     /   o     \\     /         \\\n"
-        << "    |           |   |    o     |\n"
-        << "    |     o    /     \\         |\n"
-        << "     \\_______ /       \\_______/\n\n";
+void ArtDice() { //changed the Art design for the the dice to squares 
+    // Two Dice
+    cout << "     ___________       ___________\n";
+    cout << "    |           |     |           |\n";
+    cout << "    |   o       |     |           |\n";
+    cout << "    |           |     |     o     |\n";
+    cout << "    |       o   |     |           |\n";
+    cout << "    |___________|     |___________|\n\n";
     LineBreak();
     SpaceBreak();
 }
+
 
 void ArtMedieval() {
     cout << "          /\\\n"

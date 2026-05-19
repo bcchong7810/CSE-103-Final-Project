@@ -1,2 +1,6 @@
-﻿  Location.cpp
+﻿  LoadWorld.cpp
+  Location.cpp
+  MainCharacter.cpp
+  main.cpp
+  Generating Code...
   CSE 103 Final Project.vcxproj -> C:\Users\mechg\OneDrive\Desktop\CSE 103 Final Project\x64\Debug\CSE 103 Final Project.exe
