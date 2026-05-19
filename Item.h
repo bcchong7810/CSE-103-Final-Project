@@ -9,11 +9,10 @@ public:
     std::string name;
     std::string description;
     Item(std::string itemName, std::string itemDescription);
-    double amount;
+    int amount; // changed: double to int [if the amount is use to track number of items and not money]
     std::string getName();
     std::string getDescription();
-private:
-    void useItem();
+    void useItem(); // changed: from private to public [if user has access to useItem then it should be public]
 
 };
 

@@ -19,9 +19,9 @@ string Introduction() {
 		"You finally are able to take a deep breath and open your eyes.\n"
 		"You're not sure what happened, you look around to find yourself in a lecture hall. You look at the blackboard and see SPHINX OF BLACK QUARTZ JUDGE MY VOW written down.\n"
 		"You find yourself standing over an attendance sheet. Still unsure of what just happened, you decide you better write down your name for credit. What do you write down?\n";
-	getline(cin, userNameInput);
+	Formatting(userNameInput); // Changed: spacing purpose
 	cout << "\nDoes the name " << userNameInput << " feel correct?\n";
-	getline(cin, userInput);
+	Formatting(userInput); // Changed: spacing purpose
 	while (!YesNoResponse(InputSanitizer(userInput))) {
 		cout << endl << "What name feels correct to you?\n";
 		getline(cin, userNameInput);

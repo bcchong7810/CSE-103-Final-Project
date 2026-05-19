@@ -21,6 +21,8 @@ public:
     std::string emptyString;
     void arriveToLocation();
     void traverseToLocation(std::string locationName);
+    void AddMoney(double money);
+    void SubtractMoney(double money);
 
 };
 

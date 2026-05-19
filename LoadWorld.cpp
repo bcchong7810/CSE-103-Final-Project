@@ -15,9 +15,9 @@ vector<Location*> LoadWorld() {
 	Location* greatHall = new Location("GREAT HALL", "", met);
 	Location* ancientGreeceExhibit = new Location("ANCIENT GREEK ART EXHIBIT", "", greatHall);
 	Location* ancientEgyptExhibit = new Location("ANCIENT EGYPT ART EXHIBIT", "", greatHall);
-	Location* medievalArt = new Location("MEDIEVAL ART EXHIBIT", "Test Description", greatHall);
-	Location* sphinx = new Location("THE GREAT SPHINX OF GIZA", "Test Description");
-	Location* cairo = new Location("MAIN CITY OF CAIRO", "Test Description", sphinx);
+	Location* medievalArt = new Location("MEDIEVAL ART EXHIBIT", "", greatHall);
+	Location* sphinx = new Location("THE GREAT SPHINX OF GIZA", "");
+	Location* cairo = new Location("MAIN CITY OF CAIRO", "", sphinx);
 	Location* pyramids = new Location("THE GREAT PYRAMID OF GIZA", "Test Description", cairo, sphinx);
 	Location* kalamata = new Location("KALAMATA", "Test Description", cairo);
 	Location* sparta = new Location("SPARTA", "Test Description", kalamata);
@@ -47,7 +47,7 @@ vector<Location*> LoadWorld() {
 	ancientGreeceExhibit->nextLocationOne = medievalArt;
 	ancientGreeceExhibit->description = "White marble statues dot the exhibit displaying the Greco - Roman ideals of beauty.\n"
 										"For gods, goddesses, and mortals.Antiques from the Bronze Age now rusted green with only hints of the once metallic brown.\n"
-										"And of course, Greek and Roman white marble and limestone columns can be found throughout the exhibit./n";
+										"And of course, Greek and Roman white marble and limestone columns can be found throughout the exhibit.\n";
 
 	//medievalArt
 	medievalArt->nextLocationOne = ancientEgyptExhibit;
@@ -55,27 +55,44 @@ vector<Location*> LoadWorld() {
 	medievalArt->description = "You enter a room surrounded by tapestries with fantastical animals oddly mixed with humans killing one another.\n"
 							   "Most of the tapestries and paintings seem to have an odd flat perspective.\n"
 							   "Another room is full of armor once worn by warriors of a different era.\n"
-							   "A gigantic zweihänder catches your eye and you are tempted to take it home, but that would be in poor form.\n";
+							   "A gigantic zweihander catches your eye and you are tempted to take it home, but that would be in poor form.\n";
 
 	//ancientEgyptExhibit
 	ancientEgyptExhibit->nextLocationOne = medievalArt;
-	ancientEgyptExhibit->NPCone = new NPC("SPHINX", "Speak the words of power. Please use your INVOCATION voice.\n"); //INVOCATION INSTRUCTIONS);
-	
+	ancientEgyptExhibit->NPCone = new NPC("SPHINX", "Speak the words of power. Please use your INVOCATION voice.\n"); //ADD INVOCATION INSTRUCTIONS);
+	ancientEgyptExhibit->description = "Obelisks and statues of cats. Hieroglyphic tablets and statues depicting deities that have long lay dormant.\n"
+									   "Jewelry once worn with love, now just worn down. You sit by the reflecting pool and try to relax. You've had a long day.\n"
+									   "A giant statue catches your eye and you feel drawn to it by an invisible force.It has a human head, eagle wings and a lion body.\n"
+									   "It's a SPHINX! You resist and pull away...for now.\n";
 
 
 	//sphinx
 	sphinx->nextLocationOne = pyramids;
 	sphinx->nextLocationTwo = cairo;
+	sphinx->description = "Towering over you is a gigantic sphinx that is 66 feet high. You see an even bigger object overshadowing the Sphinx.\n"
+						  "Giant pyramids overshadow the Sphinx. You don't feel that strange energy from this sphinx.\n";
 
 	//cairo
 	cairo->nextLocationOne = kalamata;
 	cairo->nextLocationTwo = alexandria;
+	cairo->description = "The bustling city of Cairo. You keep to yourself and try to draw as little attention to yourself as possible.\n"
+						 "You find yourself in the middle of bazaar. There's multi-colored fabrics and spices all around you.\n"
+						 "The spices invade your nostrils and to be honest, it's a little overwhelming.\n"
+						 "You duck into a side alley to take a break from the crowd, the noise and the smell.\n"
+						 "You see a few shady figures in the huddle in the corner.\n"
+						 "It looks like they are GAMBLING.\n";
 
-	//pyramids no new connections
+
+	//pyramids
+	pyramids->description = "You stand at the base of the famous pyramids of Giza.\n" 
+							"You are in awe of the labor(involuntary or otherwise) that it took to build this.\n"
+							"You feel relief from the oppressive sun\n";
 
 	//kalamata
 	kalamata->nextLocationOne = sparta;
 	kalamata->nextLocationTwo = alexandria;
+	kalamata->description = "A quaint city by the sea. A region known for it's olives.\n"
+							"Maybe you could get some olives before you leave.\n";
 
 	//sparta
 	sparta->nextLocationOne = ephyra;
@@ -86,16 +103,26 @@ vector<Location*> LoadWorld() {
 
 	//alexandria
 	alexandria->nextLocationOne = santorini;
+	alexandria->NPCone = new NPC("MATHEMATICIANS", "???????????????????");
+	alexandria->description = "Naturally you look for the Great Library of Alexandria hoping it's still there.\n"
+							  "To your surprise it's still there.It reminds you of the City College campus, but bigger and more spacious.\n"
+							  "You enter to find scrolls from wall to wall.You notice people huddle around a table working on what seems to be math.\n"
+							  "The MATHEMATICIANS look at you, but then go back to what they were doing.\n";
+
 
 	//santorini
 	santorini->nextLocationOne = athens;
+	santorini->description = "Your friends had told you about Santorini in the past. They described blue domed roofs and white buildings.\n"
+							 "Waters that were clear and blue, as far as they eye could see. The area is grey and dusty.\n"
+							 "It appears to be the latest victim of a volcanic eruption.\n";
 	
 	//athens
 	athens->nextLocationOne = olympus;
-	athens->NPCone = new NPC("ATHENA", "What brings you to this part of Hellas? If you are going to be wandering around, you should be well prepared\n");
+	athens->NPCone = new NPC("GREY-EYED WOMAN", "What brings you to this part of Hellas? If you are going to be wandering around, you should be well prepared.\n");
 
 	
 	//olympus no next location, dead end... keep for NPC creation
+	olympus->NPCone = new NPC("ELDERLY BEGGAR", "");
 	
 
 	//elysium
@@ -109,6 +136,10 @@ vector<Location*> LoadWorld() {
 	mourning->nextLocationOne = tartarus;
 
 	//tartarus home??
+	tartarus->description = "The deepest layer of Hades and some say even the Universe. Here you see the mortal who committed transgressions, that is unforgivable sins.\n"
+							"You see Sisyphus pushing his boulder up a steep slope for it to come crashing down from the top. At the bottom of that slope you see Tantalus bound to a tree.\n"
+							"You watch as he reaches up to grab a plump pomegranate for it to pull away at the last moment.\n"
+							"You see him kneel down to try to drink some water, but the water seems to recede into the ground under his feet when he comes near.\n";
 
 	vector<Location*> world = { subway, met, greatHall, ancientGreeceExhibit, ancientEgyptExhibit, medievalArt, sphinx, cairo, pyramids, kalamata, sparta, ephyra, alexandria, santorini, athens, olympus, elysium, asphodel, mourning, tartarus};
 

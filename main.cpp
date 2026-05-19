@@ -72,6 +72,12 @@ int main() {
                             "You land in a pile of hot sand. The sun is blazing above you.\n"
                             "The heat is oppressive, you run forward to hide in a shadow\n"
                             "You look up and see the Great Sphinx of Giza before you.\n";
+                            "You try to get you bearings and pat your pockets that are empty now.\n"
+                            "It appears that your phone is missing. You look again and the Sphinx appears prestine.\n"
+                            "You suspect not only are you in Egypt, but you are in Ancient Egypt.\n"
+                            "You look out of place in your modern clothes. So you decide to borrow some clothes that are laying around\n"
+                            "As you change into your new outfit, you notice the light airy fabric, but you also notice the outfit came with 100 gold coins\n"
+                            "Woops.\n";
                     }
                 }
                 else if (LocationNameSanitizer(userResponse) == mc.currentLocation->NPCtwo->name) {
